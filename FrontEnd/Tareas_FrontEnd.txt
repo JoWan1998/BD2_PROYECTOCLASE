@@ -1,0 +1,13 @@
+Pages
+	- Log in (Wannan)
+	- Sign in (Abner)
+	- Dashboard (Wannan)
+	- Tablas (Informacion Capital, Activo, Pasivo) Todos los Bancos (Abner)
+	- Dasboard por banco (Todos los bancos) (Tentativa Wannan)
+	
+Componentes
+(Abner)		- Grafica de Linea (Promedios Ranking Bancario) **6meses
+(Wannan)	- Card % de Liquidez (Bancos mejor valorados para invertir dinero)
+(Wannan)	- Card % de Solvencia (Bancos mejor valorados para invertir dinero)
+(Abner)		- Card % de Rentabilidad (Bancos mejor valorados para invertir dinero)
+(Wannan)	- Card % de Calidad de Activos (Bancos mejor valorados para invertir dinero)
