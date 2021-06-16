@@ -1,0 +1,63 @@
+<div class="m-0 vh-100 align-items-center row justify-content-center">
+    <div class="col-auto text-center">
+        <mat-card class="e-card">
+            <img src="/assets/img/bg-1.jpg" mat-card-image  alt="Background login">
+
+            <mat-card-content>
+                <form class="e-form" method="dialog">
+                    <mat-form-field class="e-full-width">
+                        <mat-label>Email</mat-label>
+                        <input type="email" matInput 
+                        [formControl]="emailFormControl" 
+                        placeholder="Ex. pat@e.com">
+                        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                          Por favor ingresa un correo Valido
+                        </mat-error>
+                        <mat-error *ngIf="emailFormControl.hasError('required')">
+                          Email es <strong>requerido</strong>
+                        </mat-error>
+                      </mat-form-field>
+
+                      <br/>
+
+                    <mat-form-field class="e-full-width">
+                        <mat-label>Password</mat-label>
+                        <input matInput type="password" 
+                        [formControl]="passFormControl" 
+                        placeholder="Ex. contrasenia">
+                        <mat-error *ngIf="passFormControl.errors && !passFormControl.hasError('required')">
+                          Por favor ingresa una contraseña valida. Debe poseer al menos 5 caracteres!.
+                        </mat-error>
+                        <mat-error *ngIf="passFormControl.hasError('required')">
+                          Password es <strong>requerido</strong>
+                        </mat-error>
+                      </mat-form-field>
+                      <br/>
+                      <br/>
+                      <div class="row">
+                          <div class="col">
+                            <p class="text-left">
+                                <mat-error *ngIf="error">
+                                Usuario y/o Contraseña <strong> Incorrectos.</strong>
+                              </mat-error>
+                            </p>
+                          </div>
+                          <div class="col">
+                            <p class="text-right"><button mat-button color="primary" >INICIAR SESION</button></p>
+                          </div>
+                      </div>
+                      
+                  </form>
+            </mat-card-content>
+
+            <mat-card-footer>
+                <mat-progress-bar
+                    *ngIf="login"
+                    color="primary"
+                    mode="indeterminate"
+                >
+                </mat-progress-bar>
+            </mat-card-footer>     
+        </mat-card>
+    </div>
+</div>
