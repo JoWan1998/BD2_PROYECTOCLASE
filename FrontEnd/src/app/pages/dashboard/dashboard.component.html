@@ -1,0 +1,36 @@
+<mat-drawer-container class="e-container">
+    <mat-drawer mode="side" opened class="main-container" >
+      <br/>
+      <br/>
+      <mat-list role="list">
+        <mat-list-item role="listitem">
+          <mat-icon matListIcon>home</mat-icon>
+          <h3 matLine> Home </h3>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+          <mat-icon matListIcon>description</mat-icon>
+          <h3 matLine> Reportes </h3>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+          <mat-icon matListIcon>euro_symbol</mat-icon>
+          <h3 matLine [matMenuTriggerFor]="menu"> Analisís Bancarios </h3>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>BANCO INDUSTRIAL</button>
+            <button mat-menu-item>BANCO DE DESARROLLO RURAL, S.A. </button>
+          </mat-menu>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+          <mat-icon matListIcon>feedback</mat-icon>
+          <h3 matLine> Documentación </h3>
+        </mat-list-item>
+      </mat-list>
+    </mat-drawer>
+    <mat-drawer-content>
+      <mat-toolbar  [class.mat-elevation-z0]="true" color="primary">
+        <mat-toolbar-row>
+          <span>SISTEMAS DE BASES DE DATOS 2</span>
+        </mat-toolbar-row>
+      </mat-toolbar>
+      <router-outlet></router-outlet>
+    </mat-drawer-content>
+  </mat-drawer-container>
