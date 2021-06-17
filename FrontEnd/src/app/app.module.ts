@@ -10,12 +10,24 @@ import { environment } from '../environments/environment';
 import { LoginComponent } from './pages/login/login.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { HomeComponent } from './pages/dashboard/home/home.component';
+import { CardPercentValueComponent } from './components/card-percent-value/card-percent-value.component';
+import { ReportesComponent } from './pages/dashboard/reportes/reportes.component';
+import { DocumentationComponent } from './pages/dashboard/documentation/documentation.component';
+import { AnalisisBancariosComponent } from './pages/dashboard/analisis-bancarios/analisis-bancarios.component';
+import { NotfoundComponent } from './pages/notfound/notfound.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    HomeComponent,
+    CardPercentValueComponent,
+    ReportesComponent,
+    DocumentationComponent,
+    AnalisisBancariosComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
