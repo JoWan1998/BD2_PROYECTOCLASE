@@ -16,6 +16,19 @@ import { ReportesComponent } from './pages/dashboard/reportes/reportes.component
 import { DocumentationComponent } from './pages/dashboard/documentation/documentation.component';
 import { AnalisisBancariosComponent } from './pages/dashboard/analisis-bancarios/analisis-bancarios.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
+import { CardLiquidezComponent } from './components/card-liquidez/card-liquidez.component';
+import { CardSolvenciaComponent } from './components/card-solvencia/card-solvencia.component';
+import { CardCalidadActivosComponent } from './components/card-calidad-activos/card-calidad-activos.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
+import { CardBancoComponent } from './components/card-banco/card-banco.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +40,11 @@ import { NotfoundComponent } from './pages/notfound/notfound.component';
     ReportesComponent,
     DocumentationComponent,
     AnalisisBancariosComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    CardLiquidezComponent,
+    CardSolvenciaComponent,
+    CardCalidadActivosComponent,
+    CardBancoComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +58,16 @@ import { NotfoundComponent } from './pages/notfound/notfound.component';
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
     }),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,36 +1,45 @@
-<mat-drawer-container class="e-container">
-    <mat-drawer mode="side" opened class="main-container" >
-      <br/>
-      <br/>
-      <mat-list role="list">
-        <mat-list-item role="listitem">
-          <mat-icon matListIcon>home</mat-icon>
-          <h3 matLine> Home </h3>
-        </mat-list-item>
-        <mat-list-item role="listitem">
-          <mat-icon matListIcon>description</mat-icon>
-          <h3 matLine> Reportes </h3>
-        </mat-list-item>
-        <mat-list-item role="listitem">
-          <mat-icon matListIcon>euro_symbol</mat-icon>
-          <h3 matLine [matMenuTriggerFor]="menu"> Analisís Bancarios </h3>
-          <mat-menu #menu="matMenu">
-            <button mat-menu-item>BANCO INDUSTRIAL</button>
-            <button mat-menu-item>BANCO DE DESARROLLO RURAL, S.A. </button>
-          </mat-menu>
-        </mat-list-item>
-        <mat-list-item role="listitem">
-          <mat-icon matListIcon>feedback</mat-icon>
-          <h3 matLine> Documentación </h3>
-        </mat-list-item>
-      </mat-list>
-    </mat-drawer>
-    <mat-drawer-content>
-      <mat-toolbar  [class.mat-elevation-z0]="true" color="primary">
-        <mat-toolbar-row>
-          <span>SISTEMAS DE BASES DE DATOS 2</span>
-        </mat-toolbar-row>
-      </mat-toolbar>
-      <router-outlet></router-outlet>
-    </mat-drawer-content>
-  </mat-drawer-container>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item [routerLink]="['Home']">
+        <mat-icon matListIcon >home</mat-icon>
+        <h3 matLine> Home </h3>
+      </a>
+      <a mat-list-item [routerLink]="['Reportes']">
+        <mat-icon matListIcon>description</mat-icon>
+        <h3 matLine> Información Bancos </h3>
+      </a>
+      <a mat-list-item>
+        <mat-icon matListIcon>euro_symbol</mat-icon>
+        <h3 matLine [matMenuTriggerFor]="menu"> Analisis Financiero </h3>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>BANCO INDUSTRIAL, S.A.</button>
+          <button mat-menu-item>BANCO DE DESARROLLO RURAL, S.A.</button>
+        </mat-menu>
+      </a>
+      <a mat-list-item [routerLink]="['Documentation']">
+        <mat-icon matListIcon>feedback</mat-icon>
+        <h3 matLine> Documentación </h3>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>bd2-proyectoclase</span>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

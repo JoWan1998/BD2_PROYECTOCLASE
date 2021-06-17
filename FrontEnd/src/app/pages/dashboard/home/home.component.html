@@ -1,1 +1,30 @@
-<p>home works!</p>
+<div class="grid-container">
+  <h1 class="mat-h1">Dashboard</h1>
+  <mat-grid-list cols="{{ ( cardLayout | async )?.columns }}" rowHeight="200px">
+    <!--Ranking Bancos-->
+    <mat-grid-tile [colspan]="( cardLayout | async )?.miniCard.cols"
+      [rowspan]="( cardLayout | async )?.miniCard.rows">
+      <app-card-banco [place]="1" [banco]="'Banco Industrial, S.A.'"></app-card-banco>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="( cardLayout | async )?.miniCard.cols"
+      [rowspan]="( cardLayout | async )?.miniCard.rows">
+      <app-card-banco [place]="2" [banco]="'Banco de Desarrollo Rural, S.A.'"></app-card-banco>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="( cardLayout | async )?.miniCard.cols"
+      [rowspan]="( cardLayout | async )?.miniCard.rows">
+      <app-card-banco [place]="3" [banco]="'Banco G&T Continental, S.A.'"></app-card-banco>
+    </mat-grid-tile>
+
+    <!--Ranking Graph -->
+    <mat-grid-tile *ngFor="let i of [5, 6, 7, 8]" [colspan]="( cardLayout | async )?.chart.cols"
+      [rowspan]="( cardLayout | async )?.chart.rows">
+      
+    </mat-grid-tile>
+    <!--Tables-->
+    <mat-grid-tile [colspan]="( cardLayout | async )?.table.cols" [rowspan]="( cardLayout | async )?.table.rows">
+      
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

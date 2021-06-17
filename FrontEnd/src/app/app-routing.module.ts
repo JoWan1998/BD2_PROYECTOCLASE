@@ -12,6 +12,7 @@ const routes: Routes = [
   { path: 'Login', component: LoginComponent },
   { path: 'Dashboard', component: DashboardComponent,
   children: [
+    { path: '', pathMatch: 'full', redirectTo: 'Home' },
     { path: 'Home', component: HomeComponent },
     { path: 'Reportes', component: ReportesComponent },
     { path: 'Analisis/:id', component: AnalisisBancariosComponent },

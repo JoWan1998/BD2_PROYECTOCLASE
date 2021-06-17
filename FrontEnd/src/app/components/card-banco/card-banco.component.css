@@ -1,0 +1,24 @@
+.card-place1 {
+    background-color: gold;
+    font-weight: bold;
+    width: auto;
+    justify-content: center;
+}
+
+.card-place2 {
+    background-color: silver;
+    font-weight: bold;
+    width: auto;
+    justify-content: center;
+}
+
+.card-place3 {
+    background-color: #D35400 ;
+    font-weight: bold;
+    width: auto;
+    justify-content: center;
+}
+
+.icon-display {
+    font-size: 66px;
+ }
