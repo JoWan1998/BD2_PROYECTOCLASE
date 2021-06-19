@@ -1,0 +1,71 @@
+<table mat-table [dataSource]="datos" class="mat-elevation-z8" #tabla1>
+
+  <ng-container matColumnDef="perfil">
+    <th mat-header-cell *matHeaderCellDef> Perfil Financiero </th>
+    <td mat-cell *matCellDef="let articulo"> {{articulo.perfil}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="abril">
+    <th mat-header-cell *matHeaderCellDef> Abril </th>
+    <td mat-cell *matCellDef="let articulo"> {{articulo.abril}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="mayo">
+    <th mat-header-cell *matHeaderCellDef> Mayo </th>
+    <td mat-cell *matCellDef="let articulo"> {{articulo.mayo}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="junio">
+    <th mat-header-cell *matHeaderCellDef> Junio </th>
+    <td mat-cell *matCellDef="let articulo"> {{articulo.junio}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="julio">
+    <th mat-header-cell *matHeaderCellDef> Julio </th>
+    <td mat-cell *matCellDef="let articulo"> {{articulo.julio}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="agosto">
+    <th mat-header-cell *matHeaderCellDef> Agosto </th>
+    <td mat-cell *matCellDef="let articulo"> {{articulo.agosto}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="septiembre">
+    <th mat-header-cell *matHeaderCellDef> Septiembre </th>
+    <td mat-cell *matCellDef="let articulo"> {{articulo.septiembre}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="octubre">
+    <th mat-header-cell *matHeaderCellDef> Octubre </th>
+    <td mat-cell *matCellDef="let articulo"> {{articulo.octubre}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="noviembre">
+    <th mat-header-cell *matHeaderCellDef> Noviembre </th>
+    <td mat-cell *matCellDef="let articulo"> {{articulo.noviembre}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="diciembre">
+    <th mat-header-cell *matHeaderCellDef> Diciembre </th>
+    <td mat-cell *matCellDef="let articulo"> {{articulo.diciembre}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="enero">
+    <th mat-header-cell *matHeaderCellDef> Enero </th>
+    <td mat-cell *matCellDef="let articulo"> {{articulo.enero}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="febrero">
+    <th mat-header-cell *matHeaderCellDef> Febrero </th>
+    <td mat-cell *matCellDef="let articulo"> {{articulo.febrero}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="marzo">
+    <th mat-header-cell *matHeaderCellDef> Marzo </th>
+    <td mat-cell *matCellDef="let articulo"> {{articulo.marzo}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="columnas"></tr>
+  <tr mat-row *matRowDef="let row; columns: columnas;"></tr>
+</table>
+

@@ -11,13 +11,25 @@ import { RegisterComponent } from './components/register/register.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
+import { MatTableModule } from '@angular/material/table';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { TablaRankingComponent } from './components/tabla-ranking/tabla-ranking.component';
+import { LineChartComponent } from './components/line-chart/line-chart.component';
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RegisterComponent
+    RegisterComponent,
+    TablaRankingComponent,
+    LineChartComponent
   ],
   imports: [
+    ChartsModule,
+    MatTableModule,
+    MatInputModule,
+    MatButtonModule,
     ToastrModule.forRoot(),
     FormsModule, 
     ReactiveFormsModule,
