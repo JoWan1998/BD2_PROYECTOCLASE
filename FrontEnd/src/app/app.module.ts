@@ -17,6 +17,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { TablaRankingComponent } from './components/tabla-ranking/tabla-ranking.component';
 import { LineChartComponent } from './components/line-chart/line-chart.component';
 import { ChartsModule } from 'ng2-charts';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { ChartsModule } from 'ng2-charts';
       // Register the ServiceWorker as soon as the app is stable
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
-    })
+    }),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
