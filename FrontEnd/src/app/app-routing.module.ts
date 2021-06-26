@@ -7,6 +7,9 @@ import { HomeComponent } from './pages/dashboard/home/home.component';
 import { ReportesComponent } from './pages/dashboard/reportes/reportes.component';
 import { LoginComponent } from './pages/login/login.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
+import { LineChartComponent } from './components/line-chart/line-chart.component';
+import { RegisterComponent } from './components/register/register.component';
+import { TablaRankingComponent } from './components/tabla-ranking/tabla-ranking.component';
 
 const routes: Routes = [
   { path: 'Login', component: LoginComponent },
@@ -21,6 +24,9 @@ const routes: Routes = [
   { path: '404', component: NotfoundComponent },
   { path: '**', redirectTo: '404' }
 
+  { path: 'register', component: RegisterComponent },
+  { path: 'tabla-ranking', component: TablaRankingComponent },
+  { path: 'line-chart', component: LineChartComponent }
 ];
 
 @NgModule({
