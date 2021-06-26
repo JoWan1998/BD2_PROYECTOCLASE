@@ -7,6 +7,17 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { RegisterComponent } from './components/register/register.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
+import { MatTableModule } from '@angular/material/table';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { TablaRankingComponent } from './components/tabla-ranking/tabla-ranking.component';
+import { LineChartComponent } from './components/line-chart/line-chart.component';
+import { ChartsModule } from 'ng2-charts';
+import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './pages/login/login.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
@@ -33,6 +44,10 @@ import { CardBancoComponent } from './components/card-banco/card-banco.component
 @NgModule({
   declarations: [
     AppComponent,
+    RegisterComponent,
+    TablaRankingComponent,
+    LineChartComponent
+    AppComponent,
     LoginComponent,
     DashboardComponent,
     HomeComponent,
@@ -47,6 +62,14 @@ import { CardBancoComponent } from './components/card-banco/card-banco.component
     CardBancoComponent
   ],
   imports: [
+    ChartsModule,
+    MatTableModule,
+    MatInputModule,
+    MatButtonModule,
+    ToastrModule.forRoot(),
+    FormsModule, 
+    ReactiveFormsModule,
+    FlexLayoutModule,
     BrowserModule,
     AppRoutingModule,
     MaterialModuleModule,
@@ -57,6 +80,8 @@ import { CardBancoComponent } from './components/card-banco/card-banco.component
       // Register the ServiceWorker as soon as the app is stable
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
+    }),
+    HttpClientModule
     }),
     ReactiveFormsModule,
     LayoutModule,
