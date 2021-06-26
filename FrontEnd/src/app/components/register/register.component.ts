@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-register',
@@ -11,7 +12,7 @@ export class RegisterComponent implements OnInit {
   username: string;
   password: string;
   mail: string;
-  constructor(private toastr: ToastrService) { }
+  constructor(private toastr: ToastrService, private http: HttpClient) { }
 
   ngOnInit() {
   }
@@ -29,6 +30,13 @@ export class RegisterComponent implements OnInit {
       this.toastr.error('Falta el campo Password', 'Error', {
         timeOut: 3000,
       });
+
+    this.http.post('http://190.115.3.155:16000/adduser', { nombre: this.username, email: this.mail, pass: this.password}).subscribe(data => {
+        console.log(data);
+        this.toastr.success('El Usuario a sido Creado', 'Correcto', {
+          timeOut: 3000,
+        });
+    })
   }
 
 }
