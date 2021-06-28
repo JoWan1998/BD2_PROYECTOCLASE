@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TablaRankingComponent } from './tabla-ranking.component';
+import { RankingChartComponent } from './ranking-chart.component';
 
-describe('TablaRankingComponent', () => {
-  let component: TablaRankingComponent;
-  let fixture: ComponentFixture<TablaRankingComponent>;
+describe('RankingChartComponent', () => {
+  let component: RankingChartComponent;
+  let fixture: ComponentFixture<RankingChartComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TablaRankingComponent ]
+      declarations: [ RankingChartComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TablaRankingComponent);
+    fixture = TestBed.createComponent(RankingChartComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

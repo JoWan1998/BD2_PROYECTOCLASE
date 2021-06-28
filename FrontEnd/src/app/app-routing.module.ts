@@ -12,19 +12,19 @@ import { RegisterComponent } from './components/register/register.component';
 import { TablaRankingComponent } from './components/tabla-ranking/tabla-ranking.component';
 
 const routes: Routes = [
+  { path: '', pathMatch: 'full', redirectTo: 'Login' },
   { path: 'Login', component: LoginComponent },
   { path: 'Dashboard', component: DashboardComponent,
   children: [
     { path: '', pathMatch: 'full', redirectTo: 'Home' },
     { path: 'Home', component: HomeComponent },
     { path: 'Reportes', component: ReportesComponent },
-    { path: 'Analisis/:id', component: AnalisisBancariosComponent },
-    { path: 'Documentation', component: DocumentationComponent}
+    { path: 'Documentation', component: DocumentationComponent},
+    { path: ':id', component: AnalisisBancariosComponent }    
   ]},
   { path: '404', component: NotfoundComponent },
-  { path: '**', redirectTo: '404' }
-
-  { path: 'register', component: RegisterComponent },
+  { path: '**', redirectTo: '404' },
+  { path: 'Register', component: RegisterComponent },
   { path: 'tabla-ranking', component: TablaRankingComponent },
   { path: 'line-chart', component: LineChartComponent }
 ];

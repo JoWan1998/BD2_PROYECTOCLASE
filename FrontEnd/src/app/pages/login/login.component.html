@@ -1,3 +1,12 @@
+<!-- Toolbar -->
+<mat-toolbar color="primary" class="app-header">
+  <div><a href="https://www.positronx.io" target="_blank" class="positronx">PositronX.io</a></div>
+  <span class="nav-tool-items">
+    <a mat-button routerLink="/Login" routerLinkActive="active">Log in</a>
+    <a mat-button mat-raised-button routerLink="/Register" routerLinkActive="active">Register</a>
+  </span>
+</mat-toolbar>
+<!--content-->
 <div class="m-0 vh-100 align-items-center row justify-content-center">
     <div class="col-auto text-center">
         <mat-card class="e-card">
@@ -9,7 +18,7 @@
                         <mat-label>Email</mat-label>
                         <input type="email" matInput 
                         [formControl]="emailFormControl" 
-                        placeholder="Ex. pat@e.com">
+                        placeholder="Ex. pat@e.com" #email>
                         <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
                           Por favor ingresa un correo Valido
                         </mat-error>
@@ -24,7 +33,7 @@
                         <mat-label>Password</mat-label>
                         <input matInput type="password" 
                         [formControl]="passFormControl" 
-                        placeholder="Ex. contrasenia">
+                        placeholder="Ex. contrasenia" #pass>
                         <mat-error *ngIf="passFormControl.errors && !passFormControl.hasError('required')">
                           Por favor ingresa una contraseña valida. Debe poseer al menos 5 caracteres!.
                         </mat-error>
@@ -43,7 +52,7 @@
                             </p>
                           </div>
                           <div class="col">
-                            <p class="text-right"><button mat-button color="primary" >INICIAR SESION</button></p>
+                            <p class="text-right"><button mat-button color="primary" (click)="onSubmit(email,pass)" >INICIAR SESION</button></p>
                           </div>
                       </div>
                       

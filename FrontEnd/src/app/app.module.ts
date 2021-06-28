@@ -19,7 +19,6 @@ import { LineChartComponent } from './components/line-chart/line-chart.component
 import { ChartsModule } from 'ng2-charts';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './pages/login/login.component';
-import {ReactiveFormsModule} from '@angular/forms';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { HomeComponent } from './pages/dashboard/home/home.component';
 import { CardPercentValueComponent } from './components/card-percent-value/card-percent-value.component';
@@ -32,7 +31,6 @@ import { CardSolvenciaComponent } from './components/card-solvencia/card-solvenc
 import { CardCalidadActivosComponent } from './components/card-calidad-activos/card-calidad-activos.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
@@ -40,15 +38,16 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { CardBancoComponent } from './components/card-banco/card-banco.component';
+import { RankingChartComponent } from './components/ranking-chart/ranking-chart.component';
+import { CardDatoComponent } from './components/card-dato/card-dato.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     TablaRankingComponent,
-    LineChartComponent
-    AppComponent,
     LoginComponent,
+    LineChartComponent,
     DashboardComponent,
     HomeComponent,
     CardPercentValueComponent,
@@ -59,7 +58,9 @@ import { CardBancoComponent } from './components/card-banco/card-banco.component
     CardLiquidezComponent,
     CardSolvenciaComponent,
     CardCalidadActivosComponent,
-    CardBancoComponent
+    CardBancoComponent,
+    RankingChartComponent,
+    CardDatoComponent
   ],
   imports: [
     ChartsModule,
@@ -81,8 +82,7 @@ import { CardBancoComponent } from './components/card-banco/card-banco.component
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
     }),
-    HttpClientModule
-    }),
+    HttpClientModule,
     ReactiveFormsModule,
     LayoutModule,
     MatToolbarModule,

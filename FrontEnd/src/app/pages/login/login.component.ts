@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
+import { IniciosesionService  } from 'src/app/shared/services/iniciosesion.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,7 +10,15 @@ import {FormControl, Validators} from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  login: Boolean;
+  error: Boolean;
+
+  constructor(private user: IniciosesionService, 
+              private router: Router) { 
+    this.login = false;
+    this.error = false;
+    if(localStorage.getItem('uss_key') == 'zXyvVV_1') this.router.navigate(['Dashboard']);
+  }
 
   ngOnInit(): void {
   }
@@ -23,7 +33,28 @@ export class LoginComponent implements OnInit {
     Validators.minLength(5)
   ]);
 
-  login = false;
-  error = false;
+  
+
+  onSubmit(user, email)
+  {
+    this.login = true;
+    
+    this.user.iniciar_sesion(user.value, email.value)
+    .subscribe(
+      (response)=>{
+        console.log(JSON.stringify(response))
+        var resp = JSON.parse(JSON.stringify(response));
+        console.log(resp)
+        if(resp.result === "1"){
+          localStorage.setItem('uss_key','zXyvVV_1');
+          this.router.navigate(['Dashboard']);
+        }
+        else {
+          this.error = true;
+          this.login = false;
+        }
+      }
+    );
+  }
 
 }
