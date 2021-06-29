@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1624946649450,
+  "timestamp": 1624946900744,
   "index": "/BD2_PROYECTOCLASE/index.html",
   "assetGroups": [
     {
@@ -55,7 +55,7 @@
     "/BD2_PROYECTOCLASE/assets/img/bg-1.jpg": "5459081425d289784e14d316a431c578233b7187",
     "/BD2_PROYECTOCLASE/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
     "/BD2_PROYECTOCLASE/index.html": "d97dff4983a6462675130a867d3bae0435a335ee",
-    "/BD2_PROYECTOCLASE/main.js": "3ac502fedddfa82f212cb34f6766cfe8d087d66a",
+    "/BD2_PROYECTOCLASE/main.js": "9786992ca6cac44facf6399dd4d981d878e90fe4",
     "/BD2_PROYECTOCLASE/manifest.webmanifest": "901f89595dcc2a0bca9d5ca8aaeb459ed7f268fd",
     "/BD2_PROYECTOCLASE/polyfills.js": "82da06c91add66251cff65d554b59256af74ff16",
     "/BD2_PROYECTOCLASE/runtime.js": "9dbeb333ab4c3b21605b44b2a7c6bc76d8c81db7",
