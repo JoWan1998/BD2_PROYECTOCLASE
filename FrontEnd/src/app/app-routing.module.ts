@@ -8,8 +8,8 @@ import { ReportesComponent } from './pages/dashboard/reportes/reportes.component
 import { LoginComponent } from './pages/login/login.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
 import { LineChartComponent } from './components/line-chart/line-chart.component';
-import { RegisterComponent } from './components/register/register.component';
 import { TablaRankingComponent } from './components/tabla-ranking/tabla-ranking.component';
+import { RegisterComponent } from './components/register/register.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'Login' },
@@ -22,11 +22,11 @@ const routes: Routes = [
     { path: 'Documentation', component: DocumentationComponent},
     { path: ':id', component: AnalisisBancariosComponent }    
   ]},
-  { path: '404', component: NotfoundComponent },
-  { path: '**', redirectTo: '404' },
   { path: 'Register', component: RegisterComponent },
   { path: 'tabla-ranking', component: TablaRankingComponent },
-  { path: 'line-chart', component: LineChartComponent }
+  { path: 'line-chart', component: LineChartComponent },
+  { path: '404', component: NotfoundComponent },
+  { path: '**', redirectTo: '404' }
 ];
 
 @NgModule({
