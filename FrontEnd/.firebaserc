@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "bases2-c5a25"
+  },
+  "targets": {
+    "bases2-c5a25": {
+      "hosting": {
+        "bd2-proyectoclase": [
+          "bases2-c5a25"
+        ]
+      }
+    }
+  }
+}

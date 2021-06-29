@@ -12,7 +12,8 @@ export class InstitucionesService {
 
   GetInstituciones(){
     let instituciones: institucion[] = [];
-    this.http.get('http://190.115.3.155:16000/InstitucionFinanciera').subscribe(
+    const headers = {'Content-Type': 'application/json',"Access-Control-Allow-Origin": "*",'Accept': 'application/json'};
+    this.http.get('http://190.115.3.155:16000/InstitucionFinanciera', {headers}).subscribe(
       (datos) =>{
         var data = JSON.parse(JSON.stringify(datos));
         data.forEach(
@@ -33,7 +34,8 @@ export class InstitucionesService {
   }
 
   GetInst() {
-    return this.http.get('http://190.115.3.155:16000/InstitucionFinanciera');
+    const headers = {'Content-Type': 'application/json',"Access-Control-Allow-Origin": "*",'Accept': 'application/json'};
+    return this.http.get('http://190.115.3.155:16000/InstitucionFinanciera', {headers});
   }
 
   GetInfo() {
