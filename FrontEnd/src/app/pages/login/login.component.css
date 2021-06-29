@@ -1,4 +1,6 @@
- 
+.spacer {
+  flex: 1 1 auto;
+} 
   .Login { 
     width: 100%;
     height: auto;

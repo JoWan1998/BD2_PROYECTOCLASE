@@ -1,1 +1,21 @@
-<p>notfound works!</p>
+ <!-- Toolbar -->
+ <mat-toolbar color="primary" class="app-header">
+  <span class="spacer"></span>
+  <span class="nav-tool-items">
+    <a mat-button [routerLink]="['/Login']" routerLinkActive="active">Log in</a>
+    <a mat-button mat-raised-button [routerLink]="['/Register']" routerLinkActive="active">Register</a>
+  </span>
+</mat-toolbar>
+<svg>
+  <defs>
+    <filter id="glow">
+      <fegaussianblur class="blur" result="coloredBlur" stddeviation="4"></fegaussianblur>
+      <femerge>
+        <femergenode in="coloredBlur"></femergenode>
+        <femergenode in="SourceGraphic"></femergenode>
+      </femerge>
+    </filter>
+  </defs>
+</svg>
+
+<h2>Page Not Found</h2>
