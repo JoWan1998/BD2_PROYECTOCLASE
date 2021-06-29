@@ -107,7 +107,6 @@ export class RankingChartComponent implements OnInit {
         else
           object.push(ranking[value]["2021-04-30"]);
 
-        console.log(object)
         this.lineChartData.push({ data: [object[0],object[1],object[2],object[3],object[4],object[5],object[6],object[7],object[8],object[9],object[10],object[11],object[12]], label: ranking[value]["Banco"] , borderColor: this.getRandomRgb() , backgroundColor: 'rgba(10, 115, 163, 0)'})
 
         }

@@ -15,6 +15,7 @@ export class AnalisisBancariosComponent implements OnInit {
 
   name: any;
   id: any;
+  codigo: any;
 
   
   institucion1: string;
@@ -28,6 +29,7 @@ export class AnalisisBancariosComponent implements OnInit {
   ngOnInit() {
     this.name = this.route.params.subscribe(params => {
       this.id = params['id'];
+     
     });
     
   }
