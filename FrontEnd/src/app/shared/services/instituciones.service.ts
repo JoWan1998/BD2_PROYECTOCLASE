@@ -32,9 +32,18 @@ export class InstitucionesService {
     return instituciones;
   }
 
+  GetInst() {
+    return this.http.get('http://190.115.3.155:16000/InstitucionFinanciera');
+  }
+
   GetInfo() {
     const headers = {'Content-Type': 'application/json',"Access-Control-Allow-Origin": "*",'Accept': 'application/json'};
     return this.http.get('http://190.115.3.155:16000/ranking', { headers });    
+  }
+
+  Getdata(){
+    const headers = {'Content-Type': 'application/json',"Access-Control-Allow-Origin": "*",'Accept': 'application/json'};
+    return this.http.get('http://190.115.3.155:16000/PerfilFinanciero', { headers }); 
   }
 
 }

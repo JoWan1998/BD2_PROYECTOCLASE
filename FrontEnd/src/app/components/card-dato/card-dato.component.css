@@ -1,18 +1,18 @@
-.card-liquidez {
+.card-activo {
     background-color: gold;
     font-weight: bold;
     width: auto;
     justify-content: center;
 }
 
-.card-solvencia {
+.card-capital {
     background-color: silver;
     font-weight: bold;
     width: auto;
     justify-content: center;
 }
 
-.card-rentbilidad {
+.card-pasivo {
     background-color: #D35400 ;
     font-weight: bold;
     width: auto;
